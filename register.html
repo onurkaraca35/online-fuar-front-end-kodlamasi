@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html data-wf-page="5f0c426e5c53d735ccfbb83d" data-wf-site="5f0c426e5c53d78bcffbb832" lang="tr">
+
+<title>Fuar</title>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="css/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<body>
+
+<style>
+  .w3-teal{min-height:80px;}
+  .col-md-6{margin-top:10px;}
+  p {margin-top:20px; }
+  .checkbox-2 {    width: 30px;
+    height: 30px;
+    float:left;
+    position:absolute;
+}
+a {color:#000;}
+.form-control {
+  height:48px;
+}
+</style>
+
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-right" style="display:none;right:0;" id="rightMenu">
+  <button onclick="closeRightMenu()" class="w3-bar-item w3-button w3-large">Kapat &times;</button>
+  <a href="#" class="w3-bar-item w3-button" style="border-bottom:1px solid #333">Link 1</a>
+  <a href="#" class="w3-bar-item w3-button" style="border-bottom:1px solid #333">Link 2</a>
+  <a href="#" class="w3-bar-item w3-button" style="border-bottom:1px solid #333">Link 3</a>
+</div>
+
+<div class="logo">
+<img src="images/logo.png" class="logo">
+</div>
+<div class="w3-teal">
+
+  <button class="w3-button w3-teal w3-medium w3-right" style=" border-left:1px solid #ccc;" onclick="openRightMenu()">MENU</button>
+<div class="clear"></div>
+    <button class="w3-button w3-teal w3-grey w3-medium w3-right" style=" border-left:1px solid #ccc;  max-width:250px; width:50%; min-width:100px;" > <i class="fa fa-plus-square-o"></i>  <a href="register.html" style="text-decoration:none">Kayıt Olun</a></button>
+      <button class="w3-button w3-teal w3-grey w3-medium w3-right" style=" max-width:250px; width:50%;"  >  <i class="fa fa-check-square-o"></i> Giriş</button>
+</div>
+
+<div class="w3-container" style="background: #3b414b; ">
+<center style="margin-top:25px">
+<div class="row" style="max-width: 800px">
+<div class="col-md-12">
+<h2>Kayıt Olun</h2>
+* Doldurulması zorunlu alanlar<br><br>
+</div>
+<div class="col-md-12">
+ <form id="register_form" name="register_form" method="post" action="registerForm" method="post">
+</div>
+<div class="col-md-6">
+<input type="eczaciadisoyadi" class="form-control" id="eczaciadisoyadi" placeholder="* Eczacı Adı Soyadı" name="eczaciadisoyadi" required>
+</div>
+<div class="col-md-6">
+<input type="email" class="form-control" id="email" placeholder="* Email" name="email" required>
+</div>
+<div class="col-md-6">
+<input type="sehir" class="form-control" id="sehir" placeholder="* Şehir" name="sehir" required>
+</div>
+<div class="col-md-6">
+<input type="ilce" class="form-control" id="ilce" placeholder=" İlçe" name="ilce">
+</div>
+<div class="col-md-6">
+<input type="tel" class="form-control" id="tel" placeholder="* Telefon" name="tel" required>
+</div>
+<div class="col-md-6">
+<input type="gln" class="form-control" id="gln" placeholder="* GLN NO" name="gln" required>
+</div>
+<div class="col-md-6">
+<input type="eczane" class="form-control" id="eczane" placeholder="* Eczane" name="eczane" required>
+</div>
+<div class="col-md-6">
+<select  class="form-control" id="calismasekli"  name="calismasekli">
+<option>* Çalışma Şekli</option>
+<option>Vadeli</option>
+<option>Peşin</option>
+</select>
+</div>
+<div class="col-md-6">
+<select  class="form-control" id="sube"  name="sube">
+<option value="">* Şube</option>
+<option value="ADANA">ADANA</option>
+<option value="ADAPAZARI">ADAPAZARI</option>
+<option value="ANKARA">ANKARA</option>,
+<option value="ANTALYA">ANTALYA</option>
+<option value="AS ADANA">AS ADANA</option>
+<option value="AS DEN&#x130;ZL&#x130;">AS DENİZLİ</option>
+<option value="AS &#x130;STANBUL">AS İSTANBUL</option>
+<option value="AS &#x130;ZM&#x130;R">AS İZMİR</option>
+<option value="AYDIN">AYDIN</option>
+<option value="BURSA">BURSA</option>
+<option value="D&#x130;YARBAKIR">DİYARBAKIR</option>
+<option value="ERZURUM">ERZURUM</option>
+<option value="ESK&#x130;&#x15E;EH&#x130;R">ESKİŞEHİR</option>
+<option value="GAZ&#x130;ANTEP">GAZİANTEP</option>
+<option value="&#x130;STANBUL AS SANCAKTEPE">İSTANBUL AS SANCAKTEPE</option>
+<option value="&#x130;STANBUL ESENYURT">İSTANBUL ESENYURT</option>
+<option value="&#x130;STANBUL KA&#x11E;ITHANE">İSTANBUL KAĞITHANE</option>
+<option value="&#x130;STANBUL MERKEZ ALTUN&#x130;ZADE">İSTANBUL MERKEZ ALTUNİZADE</option>
+<option value="&#x130;STANBUL PEND&#x130;K">İSTANBUL PENDİK</option>
+<option value="&#x130;ZM&#x130;R">İZMİR</option>
+<option value="KAYSER&#x130;">KAYSERİ</option>
+<option value="KONYA">KONYA</option>
+<option value="MALATYA">MALATYA</option>
+<option value="SAMSUN">SAMSUN</option>
+<option value="TRABZON">TRABZON</option>
+<option value="TRAKYA">TRAKYA</option>
+</select>
+</div>
+<div class="col-md-6"></div>
+<div class="col-md-6">
+<input type="sifre" class="form-control" id="sifre" placeholder="* Şifre Oluştur" name="sifre" required>
+</div>
+<div class="col-md-6">
+<input type="sifretekrar" class="form-control" id="sifretekrar" placeholder="* Şifre Tekrar" name="sifretekrar" required>
+</div>
+<div class="col-md-12">
+
+                                    <p style="border:5px solid #2a2b36; border-radius:8px; padding:10px">
+                            <input type="checkbox" class="checkbox-2">      
+                  <label  style="vertical-align:middle; text-align:left; margin-left:40px; ">  Kişisel verilerimin işlenmesi faaliyetlerine ilişkin açıklamaları içeren Kişisel Verilerin Kullanımı ile İlgili Bildirim’i okuduğumu, anladığımı Kabul ederim.
+
+</label>
+
+                                    </p>
+                      
+</div>
+<div class="col-md-12">
+<center>
+<button type="submit" class="btn btn-secondary btn-lg" style="min-width:200px" >KAYIT</button>
+</center>
+</div>
+</form>
+</div>
+
+</div>
+ </div>
+</div>
+<script>
+function openLeftMenu() {
+  document.getElementById("leftMenu").style.display = "block";
+}
+
+function closeLeftMenu() {
+  document.getElementById("leftMenu").style.display = "none";
+}
+
+function openRightMenu() {
+  document.getElementById("rightMenu").style.display = "block";
+}
+
+function closeRightMenu() {
+  document.getElementById("rightMenu").style.display = "none";
+
+
+}
+
+</script>
+  
+</body>
+</html>
